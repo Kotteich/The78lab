@@ -1,0 +1,287 @@
+:root {
+    --main-text-font-size: 20px;
+    --header-text-font-size: 42px;
+    --btn-text-font-size: 26px;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Cormorant Garamond', serif;
+    --font-fallback: Georgia, 'Times New Roman', Times, serif;
+    --font-sans-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    --section-bg-color: #f0ecec;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: var(--font-body), var(--font-fallback);
+    font-weight: 600;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/*mobile layout*/
+
+header {
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    width: 100vw;
+    margin: 0 auto;
+    font-size: var(--header-text-font-size);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;
+}
+
+.logo {
+    height: 50px;
+}
+
+
+
+
+bg-menu {
+    margin-right: 5%;
+    margin-top: 15px;
+    padding: 0;
+
+}
+
+nav-bar {
+
+    display: none;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+    color: #1B1A1A;
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    background:
+        linear-gradient(rgba(243, 240, 240, 0.856), rgba(0, 0, 0, 0.5)),
+
+        url('IMG_5784-min.webp') center/cover;
+}
+
+descr-logo {
+    display: flex;
+    width: 255px;
+    height: 255px;
+
+
+}
+
+#svg-logo {
+    display: block;
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.necklace {
+    height: 50px;
+    position: absolute;
+    ;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+
+}
+
+
+
+#romb {
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+
+descr-header {
+    font-size: var(--header-text-font-size);
+    margin-top: -20px;
+
+}
+
+descr-text {
+    font-size: var(--main-text-font-size);
+    margin-bottom: 120px;
+    margin-top: 0;
+}
+
+
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0 auto;
+
+    background: url(faith-fashion-7-religious-charms-great-for-faith-based-jewelry-348616.webp) center/cover;
+
+}
+
+card {
+    display: flex;
+    gap: 32px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 75vw;
+    padding: 15px;
+    max-width: 740px;
+    background-color: #f0ececc7;
+
+
+    border-radius: 10px;
+    box-shadow: 10px 10px 12px 0.5px rgba(0, 0, 0, 0.192);
+}
+
+.card-logo {
+    height: 60px;
+    width: 60px;
+}
+
+.hands {
+    width: 50px;
+}
+
+card-text {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--main-text-font-size);
+
+}
+
+card-header {
+    font-size: 30px;
+}
+
+.handcrafted {
+    margin-top: 40px;
+}
+
+.btn {
+    padding: 10px 35px;
+    border: 2px solid #000;
+    border-radius: 8%;
+    font-size: var(--btn-text-font-size);
+
+}
+
+browse-btn {
+    margin-bottom: 40px;
+    margin-top: 8px;
+}
+
+
+
+
+
+
+    /*.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+     grid-template-rows: auto 1fr auto;
+    gap: 30px;
+    grid-template-areas:
+        "rings rings"
+        "crowns panagia"
+        "earrings earrings";
+}*/
+#rings {
+    grid-area: rings;
+    background: url(кольцо.png) center/cover;
+    color: #f0ecec;
+}
+
+#earrings {
+    grid-area: earrings;
+    background: url() center/cover;
+    color: #f0ecec;
+}
+
+#pendants {
+    grid-area: pendants;
+    background: url(подвеска.png) center/cover;
+    color: #f0ecec;
+}
+
+#panagia {
+    grid-area: panagia;
+    background: url() center/cover;
+    color: #f0ecec;
+}
+
+#crowns {
+    grid-area: crowns;
+    background: url(60265425-b1f9-4110-aedc-062bd2003c6c.jpg) center/cover;
+    color: #f0ecec;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 30px 0;
+    background-color: var(--section-bg-color);
+}
+
+item {
+    display: flex;
+    min-width: 300px;
+    max-width: 85vw;
+    flex-grow: 1;
+     min-height: 300px;
+  max-height: 500px;
+    justify-content: space-around;
+   text-align:  center;
+   margin: 0 auto;
+   border: 1px solid #000;
+}
+
+.application-form {
+    background: #292626de;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+#application {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
