@@ -18,22 +18,28 @@
     <header>
 
         <header-logo><img class="logo" src="cross-christian-svgrepo-com.svg" alt="logo">Звонница</header-logo>
-<bg-menu>
-        <button class="bg-menu" id="menu-btn">
-    <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.5 10H17.5M2.5 5H17.5M2.5 15H17.5" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"
+
+        <bg-menu id="menuBtn">
+            <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.5 10H17.5" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M2.5 5H17.5" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M2.5 15H17.5" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"
                     stroke-linejoin="round" />
             </svg>
         </bg-menu>
 
-        <nav-bar>
-            <div class="nav-link">Проекты</div>
-            <div class="nav-link">О нас</div>
-            <div class="nav-link">Новости</div>
-            <div class="nav-link">Команда</div>
-            <div class="nav-link">Контакты</div>
-            <div class="nav-link black-btn">Заказать</div>
+        <div id="overlay"></div>
+
+        <nav-bar id="navBar">
+            <a href="#about-us" class="nav-link">О нас</a>
+            <a href="#gallery" class="nav-link">Каталог</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+            <a href="#application-form" class="nav-link black-btn">Заказать</a>
         </nav-bar>
+
+
 
     </header>
 
@@ -59,7 +65,7 @@
             vitae</descr-text>
     </section>
 
-    <section class="about-us">
+    <section id="about-us" class="about-us">
         <card class="handcrafted">
             <img class="card-logo hands" src="save_the_world_planet_care_nature_icon_220625.svg" alt="card">
 
@@ -84,41 +90,41 @@
                 vitae</card-text>
         </card>
 
-        <browse-btn class="btn">Каталог</browse-btn>
+        <browse-btn class="btn"><a href="#gallery" class="nav-link">Каталог</a></browse-btn>
     </section>
 
-    <section class="gallery">
+    <section id="gallery" class="gallery">
 
         <item id="rings">
             <item-header class="item-header">Кольца</item-header>
-            <order-btn class="btn">Заказать</order-btn>
+            <order-btn class="btn"><a href="#application-form">Заказать</a></order-btn>
         </item>
 
         <item id="panagia">
             <item-header class="item-header">Панагии</item-header>
-            <order-btn class="btn">Заказать</order-btn>
+            <order-btn class="btn"><a href="#application-form">Заказать</a></order-btn>
         </item>
 
         <item id="pendants">
             <item-header class="item-header">Подвески</item-header>
-            <order-btn class="btn">Заказать</order-btn>
+            <order-btn class="btn"><a href="#application-form">Заказать</a></order-btn>
         </item>
 
         <item id="crowns">
             <item-header class="item-header">Венцы</item-header>
-            <order-btn class="btn">Заказать</order-btn>
+            <order-btn class="btn"><a href="#application-form">Заказать</a></order-btn>
         </item>
 
         <item id="earrings">
             <item-header class="item-header">Серьги</item-header>
-            <order-btn class="btn">Заказать</order-btn>
+            <order-btn class="btn"><a href="#application-form">Заказать</a></order-btn>
         </item>
 
 
 
     </section>
 
-    <section class="application-form">
+    <section id="application-form" class="application-form">
 
         <application-header>Оставить заявку</application-header>
         <form id="application" action="submit">
@@ -136,19 +142,19 @@
     </section>
 
     <footer>
-<contacts>Связаться с нами:</contacts>
+        <contacts id="contacts">Связаться с нами:</contacts>
         <telephone>Позвонить: <a href="tel:+78125553535">+78125553535</a></telephone>
         <email>Написать: <a href="mailto:faith@gmail.com">faith@gmail.com</a></email>
-        
+
     </footer>
-<div id="rights">©2025 Никакие права незащищены</div>
+    <div id="rights">©2025 Никакие права незащищены</div>
 
 
 
 
 
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
