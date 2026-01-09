@@ -28,14 +28,14 @@ header {
     align-items: center;
     text-align: center;
     font-weight: 400;
-    width: 100vw;
     margin: 0 auto;
     font-size: var(--header-text-font-size);
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
+    background-color: #f0ececde;
 }
 
 header-logo {
@@ -48,10 +48,6 @@ header-logo {
 .logo {
     height: 50px;
 }
-
-
-
-
 bg-menu {
     margin-right: 5%;
     margin-top: 15px;
@@ -59,8 +55,8 @@ bg-menu {
 
 }
 
-nav-bar {
 
+nav-bar {
     display: none;
     gap: 32px;
     align-items: center;
@@ -68,7 +64,8 @@ nav-bar {
     color: #1B1A1A;
 }
 
-section {
+section,
+footer {
     width: 100%;
     margin: 0 auto;
     max-width: 1440px;
@@ -83,7 +80,7 @@ section {
     align-items: center;
     height: 100vh;
     background:
-        linear-gradient(rgba(243, 240, 240, 0.856), rgba(0, 0, 0, 0.5)),
+        linear-gradient(rgba(243, 240, 240, 0.87), rgba(0, 0, 0, 0.664)),
 
         url('IMG_5784-min.webp') center/cover;
 }
@@ -196,7 +193,7 @@ card-header {
 .btn {
     padding: 10px 35px;
     border: 2px solid #000;
-    border-radius: 8%;
+
     font-size: var(--btn-text-font-size);
 
 }
@@ -211,7 +208,7 @@ browse-btn {
 
 
 
-    /*.gallery {
+/*.gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
      grid-template-rows: auto 1fr auto;
@@ -229,19 +226,19 @@ browse-btn {
 
 #earrings {
     grid-area: earrings;
-    background: url() center/cover;
+    background: url(Joy\ Dravecky\ Viking\ Cross\ Hoops\ at\ Free\ People\ in\ Gold.png) center/cover;
     color: #f0ecec;
 }
 
 #pendants {
     grid-area: pendants;
-    background: url(подвеска.png) center/cover;
+    background: url(religious-pendants-and-their-meanings-bayamjewelry_840cb2f8-a2d1-403a-b7e7-88b56f10b129.webp) center/cover;
     color: #f0ecec;
 }
 
 #panagia {
     grid-area: panagia;
-    background: url() center/cover;
+    background: url(ZD019+ZD020-Classic-Europe-Gold-Greek-Orthodox-Pectoral-Cross-and-Panagia-Necklace-of-Religious-Gift-for-Church-Priest-Bishop.avif) center/cover;
     color: #f0ecec;
 }
 
@@ -250,29 +247,50 @@ browse-btn {
     background: url(60265425-b1f9-4110-aedc-062bd2003c6c.jpg) center/cover;
     color: #f0ecec;
 }
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     padding: 30px 0;
     background-color: var(--section-bg-color);
+
 }
 
 item {
     display: flex;
+    gap: 0;
     min-width: 300px;
     max-width: 85vw;
     flex-grow: 1;
-     min-height: 300px;
-  max-height: 500px;
+    min-height: 300px;
+    max-height: 500px;
     justify-content: space-around;
-   text-align:  center;
-   margin: 0 auto;
-   border: 1px solid #000;
+    text-align: center;
+    margin: 15px auto;
+    border: 1px solid #000;
+}
+
+.item-header {
+    font-size: 24px;
+    background-color: #1b1a1ad3;
+    align-self: start;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+order-btn {
+    align-self: end;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    background-color: #f0ececc2;
+    color: #1b1a1a;
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .application-form {
-    background: #292626de;
+    background: #292626;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,4 +302,74 @@ item {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: #f0ecec;
+    width: 80%;
+    max-width: 640px;
+    height: 65%;
+    max-height: 400px;
+    margin-top: 20px;
+    box-shadow: #f0ecec98 5px 5px;
+    border: 1px solid #000;
+}
+
+application-header {
+    color: #f0ecec;
+    font-size: 32px;
+    border-bottom: 1px solid #f0ecec;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 15px;
+
+}
+
+label {
+    font-size: 24px;
+    border-bottom: 1px solid #000;
+    box-sizing: content-box;
+    margin-bottom: 10px;
+
+}
+
+#email-input,
+#name-input {
+    line-height: 36px;
+    font-size: 18px;
+}
+
+#submit-btn {
+    font-family: var(--font-body), var(--font-fallback);
+    font-size: 24px;
+    background-color: #f0ecec;
+    width: 90%;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 15px;
+    height: 45px;
+    box-shadow: #000000f5 2px 2px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #f0ecec;
+    padding: 15px;
+}
+
+#rights {
+    text-align: center;
+    border-top: #f0ecec62 1px solid;
+    margin: 0 auto;
+    background-color: #000;
+    color: #f0ecec62;
+
+}
+
+a {
+    color: #f0ecec;
 }

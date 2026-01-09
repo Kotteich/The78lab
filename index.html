@@ -18,9 +18,9 @@
     <header>
 
         <header-logo><img class="logo" src="cross-christian-svgrepo-com.svg" alt="logo">Звонница</header-logo>
-
-        <bg-menu>
-            <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<bg-menu>
+        <button class="bg-menu" id="menu-btn">
+    <svg width="40" height="40" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.5 10H17.5M2.5 5H17.5M2.5 15H17.5" stroke="#1E1E1E" stroke-width="1.6" stroke-linecap="round"
                     stroke-linejoin="round" />
             </svg>
@@ -34,6 +34,7 @@
             <div class="nav-link">Контакты</div>
             <div class="nav-link black-btn">Заказать</div>
         </nav-bar>
+
     </header>
 
     <section class="description">
@@ -89,27 +90,27 @@
     <section class="gallery">
 
         <item id="rings">
-            <item-header>Кольца</item-header>
+            <item-header class="item-header">Кольца</item-header>
             <order-btn class="btn">Заказать</order-btn>
         </item>
 
         <item id="panagia">
-            <item-header>Панагии</item-header>
+            <item-header class="item-header">Панагии</item-header>
             <order-btn class="btn">Заказать</order-btn>
         </item>
 
- <item id="pendants">
-            <item-header>Подвески</item-header>
+        <item id="pendants">
+            <item-header class="item-header">Подвески</item-header>
             <order-btn class="btn">Заказать</order-btn>
         </item>
 
         <item id="crowns">
-            <item-header>Венцы</item-header>
+            <item-header class="item-header">Венцы</item-header>
             <order-btn class="btn">Заказать</order-btn>
         </item>
 
         <item id="earrings">
-            <item-header>Серьги</item-header>
+            <item-header class="item-header">Серьги</item-header>
             <order-btn class="btn">Заказать</order-btn>
         </item>
 
@@ -118,33 +119,36 @@
     </section>
 
     <section class="application-form">
+
+        <application-header>Оставить заявку</application-header>
         <form id="application" action="submit">
             <div id="name" class="form">
-                <input type="text" name="name" id="name" required placeholder="Ваше имя" />
+                <label for="name-input">Имя</label><input type="text" name="name" id="name-input" required
+                    placeholder="Ваше имя" />
             </div>
             <div id="email" class="form">
-                <input type="email" name="email" id="email" required placeholder="Ваш Email" />
+                <label for="email-input">Почта</label><input type="email" name="email" id="email-input" required
+                    placeholder="Ваш Email" />
             </div>
-            <div id="submit-btn" class="btn">
-                <input type="submit" value="Заказать" />
-            </div>
+            <input id="submit-btn" type="submit" value="Отправить" />
+
         </form>
     </section>
 
     <footer>
-
-        <telephone><a href="tel:+78125553535">+78125553535</a></telephone>
-        <email><a href="mailto:faith@gmail.com">faith@gmail.com</a></email>
-        <div>2025©Никакие права незащищены</div>
+<contacts>Связаться с нами:</contacts>
+        <telephone>Позвонить: <a href="tel:+78125553535">+78125553535</a></telephone>
+        <email>Написать: <a href="mailto:faith@gmail.com">faith@gmail.com</a></email>
+        
     </footer>
+<div id="rights">©2025 Никакие права незащищены</div>
 
 
 
 
 
 
-
-
+<script src="script.js"></script>
 
 </body>
 
