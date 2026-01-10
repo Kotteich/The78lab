@@ -6,7 +6,6 @@
 
 section {
     width: 100%;
-    min-height: 100vh; /* вместо height + 100% */
 }
 
 a {
@@ -95,8 +94,8 @@ bg-menu {
 
 
 nav-bar {
-     display: flex;              /* вместо block */
-    flex-direction: column;     /* в столбик */
+     display: flex;             
+    flex-direction: column;     
     gap: 20px;
     position: fixed;
     top: 0;
@@ -137,7 +136,6 @@ section {
     width: 100vw;
     margin: 0 auto;
     
-    min-height: 100vh;
 }
 
 .description {
@@ -214,7 +212,8 @@ descr-text {
     width: 100vw;
     margin: 0 auto;
 height: 100%;
-    background: url(faith-fashion-7-religious-charms-great-for-faith-based-jewelry-348616.webp) center/cover;
+    background: linear-gradient( rgba(0, 0, 0, 0.664), rgba(243, 240, 240, 0.87)), 
+    url(faith-fashion-7-religious-charms-great-for-faith-based-jewelry-348616.webp) center/cover;
 
 }
 
@@ -321,15 +320,28 @@ browse-btn {
 
 item {
     position: relative;
-    aspect-ratio: 4 / 3;              /* КАТАЛОЖНАЯ пропорция */
+    aspect-ratio: 4 / 3;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    background-size: cover;
-    background-position: center;
+    padding: 20px;
+    border-radius: 18px;
     overflow: hidden;
+}
+
+item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0.6)
+    );
+    z-index: 0;
 }
 
 #earrings {
@@ -337,31 +349,47 @@ item {
 }
 
 .item-header {
-    font-size: 24px;
-    background-color: #1b1a1ad3;
-    align-self: start;
-    padding: 5px 10px;
-    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-family: var(--font-heading);
+    letter-spacing: 0.04em;
+
+    background-color: rgba(0,0,0,0.65);
+    color: #f0ecec;
+
+    padding: 10px 18px;
+    border-radius: 10px;
+    width: fit-content;
 }
 
 order-btn {
-    align-self: end;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    background-color: #f0ececc2;
-    color: #1b1a1a;
-    font-weight: bold;
-    font-size: 40px;
+    position: relative;
+    z-index: 1;
+margin-bottom: 32px;
+    align-self: center;
+    padding: 12px 32px;
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background-color: rgba(240,236,236,0.9);
+    color: #000;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
-
-.application-form {
+.form-footer-wrapper {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.application-form {
+    flex: 1;   
     background: #292626;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px;
     gap: 32px;
 }
 
@@ -450,6 +478,7 @@ footer {
     gap: 18px;
     padding: 40px 20px 32px;
     text-align: center;
+     flex-shrink: 0;
 }
 
 contacts {
@@ -465,7 +494,7 @@ contacts {
     margin: 0 auto;
     background-color: #000;
     color: #f0ecec62;
-
+width: 100%;
 }
 
 telephone, email {
@@ -540,13 +569,18 @@ order-btn a {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-            "rings rings"
-            "crowns panagia"
-            "pendants pendants"
-            "earrings earrings";
+            "rings crowns"
+            "panagia panagia"
+            "pendants earrings";
         gap: 32px;
         padding: 60px;
     }
+    item {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    
 }
 
 @media (hover: hover) {
@@ -557,6 +591,14 @@ order-btn a {
     item:hover {
         transform: scale(1.02);
         box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+}
+
+@media (hover: hover) {
+    item:hover order-btn {
+        background-color: #000;
+        color: #f0ecec;
+        transform: translateY(-2px);
     }
 }
 
