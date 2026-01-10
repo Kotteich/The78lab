@@ -1,3 +1,18 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh; /* вместо height + 100% */
+}
+
+a {
+    color: inherit;
+}
+
 :root {
     --main-text-font-size: 20px;
     --header-text-font-size: 42px;
@@ -37,7 +52,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
     background-color: #f0ececde;
 }
@@ -58,7 +73,7 @@ bg-menu {
     display: block;
     cursor: pointer;
     z-index: 1001;
-    margin-right: 10px;
+    margin-right: 5%;
     margin-top: 10px;
 }
 
@@ -119,19 +134,20 @@ nav-bar.active {
 
 
 section {
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     
+    min-height: 100vh;
 }
 
 .description {
     display: flex;
     flex-direction: column;
-
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 50px;
+    height: 100%;
     background:
         linear-gradient(rgba(243, 240, 240, 0.87), rgba(0, 0, 0, 0.664)),
 
@@ -139,32 +155,30 @@ section {
 }
 
 descr-logo {
-    display: flex;
+     position: relative;   
     width: 255px;
     height: 255px;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #svg-logo {
-    display: block;
-    margin-top: 90px;
     width: 100%;
     height: 100%;
-
-    position: relative;
+    display: block;
 }
 
+
 .necklace {
-    height: 50px;
     position: absolute;
-    ;
-    top: 30%;
+    width: 50px;          
+    height: auto;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-
-
+    pointer-events: none;
 }
 
 
@@ -177,14 +191,15 @@ descr-logo {
 
 descr-header {
     font-size: var(--header-text-font-size);
-    margin-top: -20px;
+    
 
 }
 
 descr-text {
     font-size: var(--main-text-font-size);
-    margin-bottom: 120px;
+    margin-bottom: 30px;
     margin-top: 0;
+    width: 70%;
 }
 
 
@@ -193,12 +208,12 @@ descr-text {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     width: 100vw;
     margin: 0 auto;
-
+height: 100%;
     background: url(faith-fashion-7-religious-charms-great-for-faith-based-jewelry-348616.webp) center/cover;
 
 }
@@ -243,6 +258,10 @@ card-header {
     margin-top: 40px;
 }
 
+.faith {
+    margin-bottom: 40px;
+}
+
 .btn {
     padding: 10px 35px;
     border: 2px solid #000;
@@ -262,20 +281,6 @@ browse-btn {
 }
 
 
-
-
-
-
-/*.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-     grid-template-rows: auto 1fr auto;
-    gap: 30px;
-    grid-template-areas:
-        "rings rings"
-        "crowns panagia"
-        "earrings earrings";
-}*/
 #rings {
     grid-area: rings;
     background: url(кольцо.png) center/cover;
@@ -309,8 +314,7 @@ browse-btn {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    padding: 30px 0;
+    
     background-color: var(--section-bg-color);
 
 }
@@ -325,8 +329,13 @@ item {
     max-height: 500px;
     justify-content: space-around;
     text-align: center;
-    margin: 15px auto;
+    margin: 0 auto;
+    margin-top: 30px;
     border: 1px solid #000;
+}
+
+#earrings {
+    margin-bottom: 30px;
 }
 
 .item-header {
@@ -348,75 +357,108 @@ order-btn {
 }
 
 .application-form {
+    min-height: 100vh;
     background: #292626;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 500px;
+    align-items: center;
+    padding: 60px 20px;
+    gap: 32px;
 }
 
 #application {
+    width: 100%;
+    max-width: 480px;
+    background-color: #f0ecec;
+    padding: 32px 28px 36px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background-color: #f0ecec;
-    width: 80%;
-    max-width: 640px;
-    height: 65%;
-    max-height: 400px;
-    margin-top: 20px;
-    box-shadow: #f0ecec98 5px 5px;
-    border: 1px solid #000;
+    gap: 24px;
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
 
 application-header {
+    font-size: clamp(28px, 4vw, 42px);
     color: #f0ecec;
-    font-size: 32px;
-    border-bottom: 1px solid #f0ecec;
+    font-family: var(--font-heading);
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(240,236,236,0.4);
+    padding-bottom: 10px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 90%;
-    margin-top: 15px;
-
+    gap: 8px;
 }
 
 label {
-    font-size: 24px;
-    border-bottom: 1px solid #000;
-    box-sizing: content-box;
-    margin-bottom: 10px;
-
+    font-size: 18px;
+    font-weight: 600;
+    color: #292626;
+    letter-spacing: 0.02em;
 }
 
-#email-input,
-#name-input {
-    line-height: 36px;
+#application input[type="text"],
+#application input[type="email"] {
+    height: 48px;
+    padding: 0 14px;
     font-size: 18px;
+    font-family: var(--font-body);
+    border: 1px solid rgba(0,0,0,0.25);
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#application input:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
 }
 
 #submit-btn {
-    font-family: var(--font-body), var(--font-fallback);
-    font-size: 24px;
+    margin-top: 16px;
+    height: 52px;
+    font-size: 20px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#submit-btn:hover {
     background-color: #f0ecec;
-    width: 90%;
-    font-weight: bold;
-    margin: 0 auto;
-    margin-top: 15px;
-    height: 45px;
-    box-shadow: #000000f5 2px 2px;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#submit-btn:active {
+    transform: translateY(1px);
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
     background-color: #000;
     color: #f0ecec;
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 40px 20px 32px;
+    text-align: center;
+}
+
+contacts {
+    font-size: clamp(20px, 3vw, 26px);
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
 }
 
 #rights {
@@ -428,6 +470,105 @@ footer {
 
 }
 
-telephone>a, email>a {
+telephone, email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+telephone img,
+email img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.9;
+}
+
+telephone a,
+email a {
     color: #f0ecec;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+telephone a:hover,
+email a:hover {
+    color: #d6d1d1;
+}
+
+.btn,
+.black-btn,
+order-btn {
+    transition: background-color 0.25s ease, color 0.25s ease;
+    cursor: pointer;
+}
+
+.btn:hover,
+order-btn:hover {
+    background-color: #000;
+    color: #f0ecec;
+}
+
+.black-btn:hover {
+    background-color: #f0ecec;
+    color: #000;
+}
+
+.btn:active,
+order-btn:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.black-btn:active {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn a,
+order-btn a {
+    color: inherit;
+}
+
+@media (max-width: 360px) {
+    telephone,
+    email {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, minmax(320px, 1fr));
+        grid-template-areas:
+            "rings rings"
+            "crowns panagia"
+            "pendants pendants"
+            "earrings earrings";
+        gap: 32px;
+        padding: 60px;
+    }
+}
+
+@media (hover: hover) {
+    item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+}
+
+@media (max-width: 360px) {
+    #application {
+        padding: 24px 20px;
+    }
+
+    application-header {
+        font-size: 26px;
+    }
 }
