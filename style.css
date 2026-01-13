@@ -150,7 +150,7 @@ section {
         linear-gradient(rgba(243, 240, 240, 0.87), rgba(0, 0, 0, 0.664)),
 
         url('IMG_5784-min.webp') center/cover;
-        
+     height: 100%;   
 }
 
 descr-logo {
@@ -583,7 +583,12 @@ order-btn a {
         max-width: 70%;
         margin: 0 auto;
     }
-
+descr-text {
+font-size: 32px;
+}
+.description {
+    height: 100vh;
+ }
     
 }
 
