@@ -25,6 +25,7 @@ a {
 
 html {
     scroll-behavior: smooth;
+    text-shadow: 1px 1px  rgba(0, 0, 0, 0.151);
 }
 
 body {
@@ -37,7 +38,7 @@ body {
     color: #000000;
 }
 
-/*mobile layout*/
+
 
 header {
     display: flex;
@@ -135,7 +136,7 @@ nav-bar.active {
 section {
     width: 100vw;
     margin: 0 auto;
-    
+    height: 100%;
 }
 
 .description {
@@ -145,7 +146,6 @@ section {
     text-align: center;
     align-items: center;
     margin-top: 50px;
-    height: 100vh;
     background:
         linear-gradient(rgba(243, 240, 240, 0.87), rgba(0, 0, 0, 0.664)),
 
@@ -199,6 +199,7 @@ descr-text {
     margin-bottom: 30px;
     margin-top: 0;
     width: 70%;
+    font-weight: bold;
 }
 
 
@@ -212,7 +213,7 @@ descr-text {
     align-items: center;
     width: 100vw;
     margin: 0 auto;
-height: 100vh;
+
     background: linear-gradient( rgba(0, 0, 0, 0.664), rgba(243, 240, 240, 0.87)), 
     url(faith-fashion-7-religious-charms-great-for-faith-based-jewelry-348616.webp) center/cover;
 
@@ -480,6 +481,7 @@ footer {
     padding: 40px 20px 32px;
     text-align: center;
      flex-shrink: 0;
+     width: 100%;
 }
 
 contacts {
@@ -487,6 +489,7 @@ contacts {
     font-family: var(--font-heading);
     letter-spacing: 0.05em;
     margin-bottom: 8px;
+    width: 100%;
 }
 
 #rights {
